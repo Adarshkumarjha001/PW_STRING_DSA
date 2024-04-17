@@ -31,3 +31,56 @@
 //	starpattern(5);
 //	
 //}
+
+
+//#include<iostream>
+//#include<cmath>
+//using namespace std;
+//int mini(int x,int y){
+//	int a;
+//	if(x<y) a=x;
+//	else a=y;
+//	return a;
+//}
+//int main(){
+//	int x,y;
+//	cin>>x>>y;
+//	min is an inbuilt fn
+//	cout<<min(x,y);
+//    cout<<max(x,y);
+//	mini is a self created fn
+//    cout<<mini(x,y);
+//   cout<<sqrt(19);
+//}
+
+
+#include<iostream>
+using namespace std;
+int factorial(int n){
+	int fact=1;
+	for(int i=1;i<=n;i++){
+		fact=fact*i;
+	}
+	return fact;
+}
+int nCr(int n,int r){
+	int nmr=factorial(n);
+	int dnm=factorial(n-r)*factorial(r);
+	return nmr/dnm;
+}
+int nPr(int n,int r){
+	int nmr=factorial(n);
+	int dnm=factorial(n-r);
+	return nmr/dnm;
+}
+int main(){
+	int n,r;
+	cin>>n>>r;
+	int x=nCr(n,r);
+	cout<<x<<endl;
+	int y=nPr(n,r);
+	cout<<y;
+	
+	
+}
+
